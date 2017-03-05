@@ -4,7 +4,12 @@ def anonymous_letter(article, message):
     catalog = dict()
 
     for word in article:
-        print ('%s' % word)
+        if not word in catalog.keys():
+            catalog[word] = 1
+        else:
+            catalog[word] = catalog[word] +1
+
+    print ('%s' % catalog)
 
 
 if __name__ == '__main__':
