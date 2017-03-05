@@ -11,6 +11,17 @@ def anonymous_letter(article, message):
 
     print ('%s' % catalog)
 
+    for word in message:
+        if word in catalog.keys():
+            if catalog[word] >=1:
+                catalog[word] = catalog[word] -1
+            else:
+                return ('Not enough %s' % word)
+        else:
+            return ('The article dont have %s' % word)
+
+    return("Completed text")    
+
 
 if __name__ == '__main__':
     
