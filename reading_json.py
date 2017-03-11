@@ -8,4 +8,4 @@ placeholder = urlopen(url)
 
 data = json.loads(placeholder.read())
 
-print(data)
+print(data["results"][0]["change_pass_answer"])
