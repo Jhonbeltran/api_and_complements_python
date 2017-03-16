@@ -19,3 +19,5 @@ print(string)
 print(type(answer))
 
 print(type(string))
+
+print(data)
